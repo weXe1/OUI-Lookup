@@ -10,10 +10,7 @@ my $oui = $ARGV[0];
 
 die "Incorrect OUI format\n" unless $oui =~ /^[0-9a-f]{2}:[0-9a-f]{2}:[0-9a-f]{2}$/i;
 
-while (<$fh>) {
-    if ($_ =~ /^$oui\|(.+)/i) {
-        print "$1\n";
-        last;
-    }
-}
+undef until <$fh> =~ /^$oui\|(.+)/i;
+
+print "$1\n";
 
