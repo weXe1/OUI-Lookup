@@ -12,3 +12,10 @@ $ export OUIFILE=/path/to/oui.txt
 ```
 $ perl ouilookup.pl <oui>
 ```
+
+## Example
+
+```
+$ perl ouilookup.pl 98:8d:46
+Intel Corporate
+```
